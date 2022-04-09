@@ -137,7 +137,7 @@ jobs:
       - setup
       - setip:
           result: Test_02
-    parallelism: 4
+    parallelism: 8
 
   Test_03:
     docker:
@@ -147,7 +147,7 @@ jobs:
       - setup
       - setip:
           result: Test_03
-    parallelism: 4
+    parallelism: 8
 
 
 
