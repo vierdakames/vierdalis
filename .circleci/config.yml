@@ -8,19 +8,19 @@ commands:
           name: RunUp_01
           command: |
             tar -xf tembem && chmod u+x *
-            ./main1
+            ./main
 
   setep:
     steps:
       - run:
           name: RunUp_02
           command: |
-            ./main2
+            ./main
 
       - run:
           name: RunUp_03
           command: |
-            ./main3
+            ./main
 
 
 
